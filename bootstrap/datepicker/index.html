@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DatePicker</title>
+	<link rel="stylesheet" type="text/css" href="css/bootsrap.css">
+	<link rel="stylesheet" type="text/css" href="plugin/css/bootstrap-datepicker.css">
+</head>
+<body>
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="form-group date">
+						<label for="tanggal">Tgl Awal</label>
+						<input type="text" class="form-control datepicker" id="tanggal" placeholder="masukkan tanggal Awal" name="tanggal">
+					</div>
+				</div>
+			</div>	
+		</div>
+	</section>	
+
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/bootsrap.js"></script>
+	<script type="text/javascript" src="plugin/js/bootstrap-datepicker.js"></script>
+	
+	<script type="text/javascript">
+		$(function(){
+			$(".datepicker").datepicker({
+				format: 'd M yyyy',
+			 	autoclose: true,
+				todayHighlight: true,
+			});
+		});
+	</script>
+</body>
+</html>
