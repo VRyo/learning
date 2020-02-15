@@ -1,3 +1,19 @@
+.animasi-enter {
+  opacity: 0.01;
+}
+.animasi-enter.animasi-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.animasi-leave {
+  opacity: 1;
+}
+.animasi-leave.animasi-leave-active {
+  transform: translateX(-100%);
+  transition: all 500ms ease-in;
+}
+
 .warna {
   background: #3498db;
   border: 2px solid #2980b9;

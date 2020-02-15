@@ -1,16 +1,31 @@
 import React, { Component} from 'react';
-import HelloWorld from './HelloWorld';
 
-class App extends Component {
+class App extends Component{
+  constructor(){
+    super();
+    this.state = { homestays: [] }
+  }
+
+  componentDidMount(){
+    fetch("https://raw.githubusercontent.com/algosigma/js-reactjs/master/homestays.json")
+    .then(response => response.json())
+    .then((data) => {
+      this.setState({ homestays: data});
+    })
+  }
+
   render(){
     return(
       <div>
-        <div className="warna1">Halo Semuanya! Saya Fajrul Aslim</div>
-        <HelloWorld namaDepan="Dilan" namaBelakang="Ramadhan"/>
-        <HelloWorld namaDepan="Milea" namaBelakang="Adnan"/>
-        <HelloWorld namaDepan="Chandra" namaBelakang="Melinda"/>
+        {
+          this.state.homestays.map((dinamis, key) =>
+            <div>
+             <p>{dinamis.nama} - Rp. {dinamis.harga} rb</p>
+            </div>
+          )
+        }
       </div>
-    )
+    );
   }
 }
 
