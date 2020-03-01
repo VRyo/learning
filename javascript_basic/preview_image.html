@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Preview Image</title>
+	<style type="text/css">
+		#image-preview{
+		    display:none;
+		    max-width : 800px;
+		    max-height : 600px;
+		}
+	</style>
+</head>
+<body>
+	<input type="file" id="image-source" onchange="previewImage();"/>
+	<br/>
+	<img id="image-preview" alt="image preview"/>
+
+	<script type="text/javascript">
+		function previewImage() {
+		    document.getElementById("image-preview").style.display = "block";
+		    var oFReader = new FileReader();
+		     oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+
+		    oFReader.onload = function(oFREvent) {
+		      document.getElementById("image-preview").src = oFREvent.target.result;
+		    };
+		  };
+	</script>
+</body>
+</html>
