@@ -1,7 +1,7 @@
 <?php 
-	$haha = '05 Oct 2019';
+	$haha = '17 dec 2019';
 	echo strtotime($haha);
-	$date = 1576497600;
+	$date = 1576537200;
 	echo '<br>';
 	echo date('d F Y', $date);
 	echo '<br>';

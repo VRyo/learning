@@ -27,11 +27,15 @@
 	<script type="text/javascript">
 		$(function(){
 			$(".datepicker").datepicker({
-				format: 'd M yyyy',
+				format: 'd',
 			 	autoclose: true,
 				todayHighlight: true,
 			});
 		});
+
+		$("#tanggal").change(function(){
+		  console.log($('#tanggal').val());
+		}); 
 	</script>
 </body>
 </html>

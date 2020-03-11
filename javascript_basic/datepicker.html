@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DatePickel Ulfa</title>
+</head>
+<body>
+	 <label for="birthday">Birthday Ulfa:</label>
+	<input type="date" id="birthday" name="birthday"> 
+
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	
+	$("#birthday").change(function(){
+		let data = $('#birthday').val();
+		let data2 = data.toString();
+		console.log(data);
+		console.log(data2);
+	}); 
+</script>
+</body>
+</html>
