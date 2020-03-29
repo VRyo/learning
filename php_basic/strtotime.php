@@ -7,5 +7,10 @@
 	echo '<br>';
 	echo 'haha';
 	echo strtotime('');
+	echo '---';
+	echo time();
+	echo '<br>';
+	echo '---';
+	echo date('d/m/Y', time());
 
  ?>
